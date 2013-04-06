@@ -25,8 +25,13 @@ optparse.parse!
 
 # load game from file
 game_file = ARGV[0]
-game_string = File.read(game_file)
-game = Golr::GameReader.from_string(game_string)
+begin
+  game_string = File.read(game_file)
+  game = Golr::GameReader.from_string(game_string)
+rescue Errno::ENOENT, Errno::EACCES => e
+  puts "Cannot read #{game_file} - Does it exist and is it readable?"
+  exit 1
+end
 
 # evolve through generations
 generations = options[:generations]
