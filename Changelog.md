@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-Version 0.5.1 - unreleased
+Version 0.5.1
 -------------
 
 * catch common io errors in golr script and provide error message
