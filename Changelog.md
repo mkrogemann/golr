@@ -5,6 +5,7 @@ Changelog
 Version 0.5.1 - unreleased
 -------------
 
+* catch common io errors in golr script and provide error message
 * make private/public accessibility more fine grained in game.rb
 
 Version 0.5.0

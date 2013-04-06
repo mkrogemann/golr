@@ -60,6 +60,7 @@ module Golr
     end
     private :neighboring_keys
 
+    # FIXME: smelly
     def fold_key_if_required(key)
       x,y = Key.coordinates(key)
       _x = x < 1 ? @columns : x
