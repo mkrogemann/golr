@@ -40,7 +40,7 @@ module Golr
 
     def living_neighbors(key)
       living_neighbors = neighboring_keys(key).inject(0) do |result, _key|      
-        result += 1 if alive?(wrap_at_board_edges(_key))
+        result += 1 if alive?(overflow_at_board_edges(_key))
         result
       end
     end
@@ -57,7 +57,7 @@ module Golr
     end
 
     # FIXME: smelly
-    def wrap_at_board_edges(key)
+    def overflow_at_board_edges(key)
       x,y = Key.coordinates(key)
       _x = x < 1 ? @columns : x
       _x = _x > @columns ? 1 : _x
@@ -66,7 +66,7 @@ module Golr
       Key.key(_x,_y)
     end
 
-    private :init_grid, :living_neighbors, :neighboring_keys, :wrap_at_board_edges
+    private :init_grid, :living_neighbors, :neighboring_keys, :overflow_at_board_edges
 
   end
 end
