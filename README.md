@@ -41,6 +41,10 @@ or
 
     golr examples/lwss -g300
 
+another nice example is the "Pulsar"
+	
+	golr examples/pulsar    
+
 If you do not specify a number of generations, its value will default to 100.
 
 Find out more about the options of the 'golr' script by calling
