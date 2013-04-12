@@ -2,10 +2,9 @@ require 'golr/key'
 require 'golr/rules'
 
 module Golr
-
   class Game
 
-    attr_reader :grid, :columns, :rows
+    attr_reader :grid, :columns, :rows  
 
     def initialize(columns, rows, living_cells = [])
       @columns = columns
@@ -24,7 +23,7 @@ module Golr
       end
       new_grid
     end
-    private :init_grid
+    
 
     def evolve
       next_grid = init_grid
@@ -46,7 +45,6 @@ module Golr
         result
       end
     end
-    private :living_neighbors
 
     def neighboring_keys(key)
       neighbor_keys = []
@@ -58,7 +56,6 @@ module Golr
       end
       neighbor_keys
     end
-    private :neighboring_keys
 
     # FIXME: smelly
     def fold_key_if_required(key)
@@ -69,7 +66,8 @@ module Golr
       _y = _y > @rows ? 1 : _y
       Key.key(_x,_y)
     end
-    private :fold_key_if_required
+
+    private :init_grid, :living_neighbors, :neighboring_keys, :fold_key_if_required
 
   end
 
