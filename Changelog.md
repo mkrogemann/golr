@@ -4,6 +4,7 @@ Changelog
 Version 0.5.2 - unreleased
 -------------
 * add example file for Pulsar
+* improve some method's names and granularities
 
 Version 0.5.1
 -------------
