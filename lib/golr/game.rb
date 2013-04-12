@@ -39,9 +39,8 @@ module Golr
     end
 
     def living_neighbors(key)
-      living_neighbors = neighboring_keys(key).inject(0) do |result, _key|
-        key = wrap_at_board_edges(_key)
-        result += 1 if alive?(key)
+      living_neighbors = neighboring_keys(key).inject(0) do |result, _key|      
+        result += 1 if alive?(wrap_at_board_edges(_key))
         result
       end
     end
