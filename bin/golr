@@ -26,10 +26,11 @@ optparse.parse!
 # load game from file
 game_file = ARGV[0]
 begin
+  game_file = "nil" if game_file.nil?
   game_string = File.read(game_file)
   game = Golr::GameReader.from_string(game_string)
 rescue Errno::ENOENT, Errno::EACCES => e
-  puts "Cannot read #{game_file} - Does it exist and is it readable?"
+  puts "Cannot read file \"#{game_file}\" - Does it exist and is it readable?"
   exit 1
 end
 
