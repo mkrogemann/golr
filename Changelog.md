@@ -1,10 +1,11 @@
 Changelog
 =========
 
-Version 0.5.2 - unreleased
+Version 0.5.2
 -------------
 * add example file for Pulsar
 * improve some method's names and granularities
+* improve error catching and feedback in golr script
 
 Version 0.5.1
 -------------
