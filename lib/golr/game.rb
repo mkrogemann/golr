@@ -4,7 +4,7 @@ require 'golr/rules'
 module Golr
   class Game
 
-    attr_reader :grid, :columns, :rows  
+    attr_reader :grid, :columns, :rows
 
     def initialize(columns, rows, living_cells = [])
       @columns = columns
@@ -15,15 +15,14 @@ module Golr
 
     def init_grid(living_cells = [])
       new_grid = {}
-      Range.new(1, @columns).to_a.each do |x|
-        Range.new(1, @rows).to_a.each do |y|
+      (1..@columns).to_a.each do |x|
+        (1..@rows).to_a.each do |y|
           key = Key.key(x, y)
           new_grid[key] = living_cells.include?(key) ? true : false
         end
       end
       new_grid
     end
-    
 
     def evolve
       next_grid = init_grid
@@ -39,7 +38,7 @@ module Golr
     end
 
     def living_neighbors(key)
-      living_neighbors = neighboring_keys(key).inject(0) do |result, _key|      
+      living_neighbors = neighboring_keys(key).inject(0) do |result, _key|
         result += 1 if alive?(wrap_key_around_board_edges(_key))
         result
       end
