@@ -4,7 +4,8 @@ require 'golr/game'
 module Golr
   describe Game do
 
-    context '#alive?' do
+    describe '#alive?' do
+
       it "a new Game returns dead cell for any coordinates within its grid boundaries" do
         key = Key.key(rand(5) + 1, rand(5) + 1)
         game = Game.new(5,5)
@@ -20,7 +21,7 @@ module Golr
       end
     end
 
-    context '#neighboring_keys' do
+    describe '#neighboring_keys' do
       it "any Game returns 8 neighboring cell coordinates for any given cell coordinate" do
         key = Key.key(rand(5) + 1, rand(5) + 1)
         game = Game.new(5,5)
@@ -29,7 +30,7 @@ module Golr
       end
     end
 
-    context '#living_neighbors' do
+    describe '#living_neighbors' do
       it "a new Game with one living cell returns zero living cells around that one living cell" do
         x,y = rand(5) + 1, rand(5) + 1
         key = Key.key(x, y)
@@ -52,8 +53,7 @@ module Golr
       end
     end
 
-
-    context '#evolve' do
+    describe '#evolve' do
       it "computes a 5-cell glider" do
         game = Game.new(8,8, ["1_2","2_3","3_1","3_2","3_3"])
         initial_grid = game.grid
@@ -72,11 +72,9 @@ module Golr
         shifted_glider[Key.key(4,3)].should be_true
         shifted_glider[Key.key(4,4)].should be_true
       end
-
     end
 
-
-    context '#wrap_key_around_board_edges' do
+    describe '#wrap_key_around_board_edges' do
       it "adjusts x and y if required" do
         game = Game.new(5,5)
 
@@ -88,5 +86,4 @@ module Golr
     end
 
   end
-
 end
