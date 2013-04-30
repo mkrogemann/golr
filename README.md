@@ -42,8 +42,8 @@ or
     golr examples/lwss -g300
 
 another nice example is the "Pulsar"
-	
-	golr examples/pulsar    
+
+	golr examples/pulsar
 
 If you do not specify a number of generations, its value will default to 100.
 
@@ -64,4 +64,3 @@ What's next?
 - Visualization (ncurses, macruby)
 - alternative game rules
 - Performance
-- improve (split) grid_matcher
