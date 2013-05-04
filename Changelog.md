@@ -1,6 +1,10 @@
 Changelog
 =========
 
+Version 0.5.3 - unreleased
+-------------
+* remove unused grid matcher and spec helper
+
 Version 0.5.2
 -------------
 * add example file for Pulsar
