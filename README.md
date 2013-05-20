@@ -12,7 +12,7 @@ Ruby implementation of [Conway's Game of Life](http://en.wikipedia.org/wiki/Conw
 Installation
 ------------
 
-In case you do not use a Ruby version manager such as RVM or rbenv, the installation will require admin rights and using 'sudo' to install it.
+In case you do not use a Ruby version manager such as [RVM](https://github.com/wayneeseguin/rvm) or [rbenv](https://github.com/sstephenson/rbenv), the installation will require admin rights and using 'sudo' to install it.
 
 The gem can be installed in the usual ways. Either let bundler take care of it and add to your Gemfile like this:
 
