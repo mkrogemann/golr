@@ -74,14 +74,14 @@ module Golr
       end
     end
 
-    describe '#wrap_key_around_board_edges' do
+    describe '#wrap_key_around_grid_edges' do
       it "adjusts x and y if required" do
         game = Game.new(5,5)
 
-        game.send(:wrap_key_around_board_edges, Key.key(-1,5)).should == Key.key(5,5)
-        game.send(:wrap_key_around_board_edges, Key.key(0,0)).should == Key.key(5,5)
-        game.send(:wrap_key_around_board_edges, Key.key(6,5)).should == Key.key(1,5)
-        game.send(:wrap_key_around_board_edges, Key.key(3,6)).should == Key.key(3,1)
+        game.send(:wrap_key_around_grid_edges, Key.key(-1,5)).should == Key.key(5,5)
+        game.send(:wrap_key_around_grid_edges, Key.key(0,0)).should == Key.key(5,5)
+        game.send(:wrap_key_around_grid_edges, Key.key(6,5)).should == Key.key(1,5)
+        game.send(:wrap_key_around_grid_edges, Key.key(3,6)).should == Key.key(3,1)
       end
     end
 

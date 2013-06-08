@@ -36,7 +36,7 @@ module Golr
 
     def living_neighbors(key)
       living_neighbors = neighboring_keys(key).reduce(0) do |result, _key|
-        result += 1 if alive?(wrap_key_around_board_edges(_key))
+        result += 1 if alive?(wrap_key_around_grid_edges(_key))
         result
       end
     end
@@ -52,7 +52,7 @@ module Golr
       neighbor_keys
     end
 
-    def wrap_key_around_board_edges(key)
+    def wrap_key_around_grid_edges(key)
       x,y = Key.coordinates(key)
       Key.key(wrap_coordinate(x, @columns), wrap_coordinate(y, @rows))
     end
@@ -62,7 +62,7 @@ module Golr
       wrapped = wrapped > limit ? 1 : wrapped
     end
 
-    private :init_grid, :living_neighbors, :neighboring_keys, :wrap_key_around_board_edges, :wrap_coordinate
+    private :init_grid, :living_neighbors, :neighboring_keys, :wrap_key_around_grid_edges, :wrap_coordinate
 
   end
 end
