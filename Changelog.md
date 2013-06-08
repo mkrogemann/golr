@@ -4,6 +4,8 @@ Changelog
 Version 0.5.3 - unreleased
 -------------
 * remove unused grid matcher and spec helper
+* replace 'to_a.each' and 'inject' with 'map' and 'reduce'
+* remove all requires from 'game.rb' (now all in golr.rb)
 
 Version 0.5.2
 -------------
