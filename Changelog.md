@@ -1,7 +1,7 @@
 Changelog
 =========
 
-Version 0.5.3 - unreleased
+Version 0.5.3
 -------------
 * remove unused grid matcher and spec helper
 * replace 'to_a.each' and 'inject' with 'map' and 'reduce'
