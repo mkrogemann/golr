@@ -15,8 +15,8 @@ module Golr
 
     def init_grid(living_cells = [])
       new_grid = {}
-      (1..@columns).to_a.each do |x|
-        (1..@rows).to_a.each do |y|
+      (1..@columns).map do |x|
+        (1..@rows).map do |y|
           key = Key.key(x, y)
           new_grid[key] = living_cells.include?(key) ? true : false
         end
@@ -47,8 +47,8 @@ module Golr
     def neighboring_keys(key)
       neighbor_keys = []
       x,y = Key.coordinates(key)
-      ((x-1)..(x+1)).to_a.each do |_x|
-        ((y-1)..(y+1)).to_a.each do |_y|
+      ((x-1)..(x+1)).map do |_x|
+        ((y-1)..(y+1)).map do |_y|
           neighbor_keys << Key.key(_x,_y) unless x == _x && y == _y
         end
       end
