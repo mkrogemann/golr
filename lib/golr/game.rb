@@ -38,7 +38,7 @@ module Golr
     end
 
     def living_neighbors(key)
-      living_neighbors = neighboring_keys(key).inject(0) do |result, _key|
+      living_neighbors = neighboring_keys(key).reduce(0) do |result, _key|
         result += 1 if alive?(wrap_key_around_board_edges(_key))
         result
       end
