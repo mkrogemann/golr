@@ -1,4 +1,5 @@
 require 'golr/game'
+require 'golr/key'
+require 'golr/rules'
 require 'golr/game_reader'
 require 'golr/game_printer'
-
