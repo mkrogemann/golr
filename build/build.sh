@@ -5,10 +5,10 @@
 rvm use 1.9.3@golr --create --fuzzy
 bundle update
 [ -d rspec ] && rm -rf rspec
-COVERAGE=true bundle update exec rspec --out rspec/rspec.xml --format html --out rspec/rspec.html
+COVERAGE=true bundle exec rspec --out rspec/rspec.xml --format html --out rspec/rspec.html
 
 [ -d cucumber ] && rm -rf cucumber
 mkdir cucumber
-COVERAGE=true bundle update exec cucumber --format html --out cucumber/cucumber.html --no-source
+COVERAGE=true bundle exec cucumber --format html --out cucumber/cucumber.html --no-source
 
 exit $?
