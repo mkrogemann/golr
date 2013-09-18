@@ -27,7 +27,7 @@ Usage
 
 An executable ships with this gem, it is called 'golr'.
 
-You can run Golr by specifying a file that contains the initial state of the game. Please find an example for such a file in examples/glider.
+You can run Golr by specifying a file that contains the initial state of the game. Please find examples of initial game definitions in the folder named 'examples'.
 
 To evolve the game from an initial state given in 'game-file' for e.g. 5 generations, call the executable like this:
 
