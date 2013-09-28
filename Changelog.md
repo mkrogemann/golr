@@ -1,6 +1,10 @@
 Changelog
 =========
 
+Version 0.5.4
+-------------
+* add --time-only option for upcoming benchmarks/performance-related work
+
 Version 0.5.3
 -------------
 * remove unused grid matcher and spec helper
