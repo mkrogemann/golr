@@ -3,9 +3,7 @@ require 'golr/game'
 
 module Golr
   describe Game do
-
     describe '#alive?' do
-
       it "a new Game returns dead cell for any coordinates within its grid boundaries" do
         key = Key.key(rand(5) + 1, rand(5) + 1)
         game = Game.new(5,5)
@@ -84,6 +82,5 @@ module Golr
         game.send(:wrap_key_around_grid_edges, Key.key(3,6)).should == Key.key(3,1)
       end
     end
-
   end
 end
