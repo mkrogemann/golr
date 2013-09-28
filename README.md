@@ -43,9 +43,13 @@ or
 
 another nice example is the "Pulsar"
 
-	golr examples/pulsar
+	  golr examples/pulsar
 
 If you do not specify a number of generations, its value will default to 100.
+
+In case you are interested only in the time spent on calculating a certain number of generations, you can add the --time-only option
+
+    golr --time-only -g 1000 examples/lwss
 
 Find out more about the options of the 'golr' script by calling
 
@@ -63,5 +67,5 @@ What's next?
 - document setup and validation of grid (gamereader/gameprinter/game)
 - Visualization (ncurses, macruby)
 - alternative game rules
-- Performance (find hotspots, different key types and data structures, exploit sparseness)
+- performance benchmarks and optimization (find hotspots, different key types and data structures, exploit sparseness)
 
