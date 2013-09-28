@@ -55,7 +55,7 @@ Find out more about the options of the 'golr' script by calling
 Dependencies / Ruby versions
 ----------------------------
 
-The gem has no runtime dependencies. It has been developed in Ruby 1.9.3 and is being continuously integrated in Ruby 2.0.0, 1.9.3 and 1.8.7.
+The gem has no runtime dependencies. It has been developed in Ruby 1.9.3 and is being continuously integrated in MRI 2.0.0, 1.9.3, 1.8.7 plus jruby-head in 1.9-mode.
 
 What's next?
 ------------
@@ -63,4 +63,5 @@ What's next?
 - document setup and validation of grid (gamereader/gameprinter/game)
 - Visualization (ncurses, macruby)
 - alternative game rules
-- Performance
+- Performance (find hotspots, different key types and data structures, exploit sparseness)
+
