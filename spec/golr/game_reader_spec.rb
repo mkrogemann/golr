@@ -2,11 +2,8 @@ require 'spec_helper'
 require 'golr'
 
 module Golr
-
   describe GameReader do
-
-    context "#from_string" do
-
+    describe "#from_string" do
       it "should read a multiline description that uses 'o' for active cells" do
         multi_line_description = <<-EOS
           |        |
@@ -30,9 +27,6 @@ module Golr
         game.alive?(Key.key(8,6)).should be_true
         game.alive?(Key.key(7,7)).should be_false
       end
-
     end
-
   end
-
 end
