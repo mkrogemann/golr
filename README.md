@@ -31,11 +31,11 @@ You can run Golr by specifying a file that contains the initial state of the gam
 
 To evolve the game from an initial state given in 'game-file' for e.g. 5 generations, call the executable like this:
 
-    golr <game-file> -g 5
+    golr <game-file> -g5
 
 So for the examples contained in this repo, you could run
 
-    golr examples/glider -g 500
+    golr examples/glider -g500
 
 or
 
@@ -43,13 +43,24 @@ or
 
 another nice example is the "Pulsar"
 
-	  golr examples/pulsar
+    golr examples/pulsar
 
 If you do not specify a number of generations, its value will default to 100.
 
 In case you are interested only in the time spent on calculating a certain number of generations, you can add the --time-only option
 
-    golr --time-only -g 1000 examples/lwss
+    golr --time-only -g1000 examples/lwss
+    4.777137s elapsed for 1000 generations
+
+On Unix-like systems, you can combine this with the 'time' command to get more insight into how the elapsed time is split up between User Time and System Time
+
+    time golr --time-only -g1000 examples/lwss
+    4.695895s elapsed for 1000 generations
+
+    real	0m5.162s
+    user	0m5.115s
+    sys	0m0.037s
+
 
 Find out more about the options of the 'golr' script by calling
 
