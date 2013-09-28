@@ -59,7 +59,7 @@ On Unix-like systems, you can combine this with the 'time' command to get more i
 
     real	0m5.162s
     user	0m5.115s
-    sys	 0m0.037s
+    sys	  0m0.037s
 
 
 Find out more about the options of the 'golr' script by calling
