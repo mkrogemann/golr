@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'golr'
 
 module Golr
   describe GameReader do

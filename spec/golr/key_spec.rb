@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'golr/key'
 
 module Golr
   describe Key do

@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'golr/game_printer'
 
 module Golr
   describe GamePrinter do

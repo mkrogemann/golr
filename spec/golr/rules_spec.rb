@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'golr/rules'
 
 module Golr
   describe Rules do
