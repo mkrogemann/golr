@@ -59,7 +59,7 @@ On Unix-like systems, you can combine this with the 'time' command to get more i
 
     real	0m5.162s
     user	0m5.115s
-    sys	0m0.037s
+    sys	 0m0.037s
 
 
 Find out more about the options of the 'golr' script by calling
@@ -75,8 +75,8 @@ The gem has no runtime dependencies. It has been developed in Ruby 1.9.3 and is 
 What's next?
 ------------
 
-- document setup and validation of grid (gamereader/gameprinter/game)
+- document setup and validation of grid (gamereader, gameprinter, game)
 - Visualization (ncurses, macruby)
 - alternative game rules
-- performance benchmarks and optimization (find hotspots, different key types and data structures, exploit sparseness)
+- Performance benchmarks and optimization (find hotspots, different key types and data structures, exploit sparseness)
 
