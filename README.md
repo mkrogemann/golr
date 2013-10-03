@@ -76,7 +76,7 @@ What's next?
 ------------
 
 - document setup and validation of grid (gamereader, gameprinter, game)
-- Visualization (ncurses, macruby)
+- Visualization (ncurses, macruby, processing)
 - alternative game rules
 - Performance benchmarks and optimization (find hotspots, different key types and data structures, exploit sparseness)
 
