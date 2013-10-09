@@ -17,7 +17,7 @@ end
 
 optparse.parse!
 
-generations = 10
+generations = 5000
 output_file = ARGV[0]
 raise 'You have to specify an output file!' unless output_file
 results = {}
