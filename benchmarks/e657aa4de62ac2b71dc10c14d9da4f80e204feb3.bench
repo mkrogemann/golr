@@ -1,0 +1,8 @@
+
+Averages are computed from ten runs for each example
+
+     example  generations   average(s)       min(s)       max(s)
+      glider         5000   27.0293199    26.918131    27.215647
+        lwss         5000   30.2390018    30.110798    30.473117
+      pulsar         5000   79.6436763    79.361446    79.949297
+
