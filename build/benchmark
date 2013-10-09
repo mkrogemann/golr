@@ -1,0 +1,63 @@
+#!/usr/bin/env ruby
+
+require 'golr'
+require 'optparse'
+
+optparse = OptionParser.new do |opts|
+  opts.banner =
+  "\nUsage: benchmark output-file"
+
+  opts.on("-h", "--help", "Print this help") do |h|
+    puts opts.banner
+    puts opts.summarize
+    puts "\n"
+    exit 0
+  end
+end
+
+optparse.parse!
+
+generations = 10
+output_file = ARGV[0]
+raise 'You have to specify an output file!' unless output_file
+results = {}
+examples = %w(glider lwss pulsar)
+examples.each do |example|
+  results[example.to_sym] = []
+end
+
+(1..10).each do |run|
+  examples.each do |example|
+    game_file = "examples/#{example}"
+    game_string = File.read(game_file)
+    game = Golr::GameReader.from_string(game_string)
+    # evolve through generations
+
+    generation = 1
+
+    time_then = Time.new
+    generations.times.each { game.evolve; generation += 1 }
+    time_now = Time.now
+    puts "#{time_now - time_then}s elapsed for #{generation - 1} generations, example '#{example}', run##{run}"
+    results[example.to_sym] << (time_now - time_then).to_f
+  end
+end
+
+# print averages / min / max to file
+stats = StringIO.new
+printf(stats, "\nAverages are computed from ten runs for each example")
+printf(stats, "\n\n")
+printf(stats, "%12s %12s %12s %12s %12s", "example", "generations", "average(s)", "min(s)", "max(s)" )
+printf(stats, "\n")
+examples.each do |example|
+  average = results[example.to_sym].inject(:+) / 10.0
+  min = results[example.to_sym].min
+  max = results[example.to_sym].max
+  printf(stats, "%12s %12s %12s %12s %12s", example, generations.to_s, average.to_s[0..11], min.to_s[0..11], max.to_s[0..11])
+  printf(stats, "\n")
+end
+printf(stats, "\n")
+puts stats.string
+File.open(output_file, 'w') { |file| file.write(stats.string) }
+
+
