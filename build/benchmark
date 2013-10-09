@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'golr'
+require 'stringio'
 
 generations = 5000
 output_file = ARGV[0]
