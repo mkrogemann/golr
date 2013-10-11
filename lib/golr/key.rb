@@ -1,16 +1,7 @@
 module Golr
-
   class Key
-
-    def self.key(x, y)
-      "#{x}_#{y}"
+    def self.key(x,y)
+      [x,y]
     end
-
-    def self.coordinates(key)
-      split = key.split('_')
-      [split[0].to_i, split[1].to_i]
-    end
-
   end
-
 end

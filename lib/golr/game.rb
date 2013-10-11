@@ -43,7 +43,7 @@ module Golr
 
     def neighboring_keys(key)
       neighbor_keys = []
-      x,y = Key.coordinates(key)
+      x,y = key
       ((x-1)..(x+1)).map do |_x|
         ((y-1)..(y+1)).map do |_y|
           neighbor_keys << Key.key(_x,_y) unless x == _x && y == _y
@@ -53,7 +53,7 @@ module Golr
     end
 
     def wrap_key_around_grid_edges(key)
-      x,y = Key.coordinates(key)
+      x,y = key
       Key.key(wrap_coordinate(x, @columns), wrap_coordinate(y, @rows))
     end
 

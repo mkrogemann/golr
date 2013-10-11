@@ -38,13 +38,13 @@ module Golr
       end
 
       it 'a new Game with two adjacent living cells returns a count of one living cell around the initial living cell' do
-        game = Game.new(5,5, ["2_3", "2_4"])
+        game = Game.new(5,5, [ [2,3], [2,4] ])
 
         game.send(:living_neighbors, Key.key(2,3)).should == 1
       end
 
       it 'a new Game with three adjacent living cells returns a count of two living cells around the initial living cell' do
-        game = Game.new(5,5, ["2_3", "2_4", "3_3"])
+        game = Game.new(5,5, [ [2,3], [2,4], [3,3] ])
 
         game.send(:living_neighbors, Key.key(2,3)).should == 2
       end
@@ -52,7 +52,7 @@ module Golr
 
     describe '#evolve' do
       it 'computes a 5-cell glider' do
-        game = Game.new(8,8, ["1_2","2_3","3_1","3_2","3_3"])
+        game = Game.new(8,8, [ [1,2], [2,3], [3,1], [3,2], [3,3] ])
         initial_grid = game.grid
         # run through 4 iterations and check for down-right-shifted glider
         4.times.each { game.evolve }
