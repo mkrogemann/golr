@@ -1,18 +1,26 @@
 Changelog
 =========
 
+Version 0.5.5
+-------------
+
+* Key is now an Array (faster than String)
+
 Version 0.5.4
 -------------
+
 * add --time-only option for upcoming benchmarks/performance-related work
 
 Version 0.5.3
 -------------
+
 * remove unused grid matcher and spec helper
 * replace 'to_a.each' and 'inject' with 'map' and 'reduce'
 * remove all requires from 'game.rb' (now all in golr.rb)
 
 Version 0.5.2
 -------------
+
 * add example file for Pulsar
 * improve some method's names and granularities
 * improve error catching and feedback in golr script
