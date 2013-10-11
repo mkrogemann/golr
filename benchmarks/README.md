@@ -15,4 +15,6 @@ Using this Software environment:
 
 The filenames of the benchmark results consist of the Ruby version and the git hash of the golr code base that was used for benchmarking.
 
+The files are kept in subfolders named 'v0.5.4' etc. These names correlate to the release tags of golr.
+
 The conditions are not 'clean room', the machine is not freshly booted for benchmarking, etc...
