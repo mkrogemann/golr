@@ -75,6 +75,9 @@ The gem has no runtime dependencies. It has been developed in Ruby 1.9.3 and is 
 What's next?
 ------------
 
+- using Arrays for Keys still sub-prime: switch to bin (2s complement)
+- use 2-dimensional Array instead of Map -> faster?
+- use 1-dimensional Array and Key based on width of Board -> faster? Could use a window (subarray?)
 - document setup and validation of grid (gamereader, gameprinter, game)
 - Visualization (ncurses, macruby, processing)
 - alternative game rules
