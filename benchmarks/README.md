@@ -18,3 +18,10 @@ The filenames of the benchmark results consist of the Ruby version and the git h
 The files are kept in subfolders named 'v0.5.4' etc. These names correlate to the release tags of golr.
 
 The conditions are not 'clean room', the machine is not freshly booted for benchmarking, etc...
+
+Learnings
+=========
+
+- Switching from String-based Key to an Array ("simulating a Tuple") improved performance as expected for all Rubies except JRuby, which came as a surprise
+- Using no Key at all but a two-dimensional Array instead did not yield any improvements, but perfomed worse by 4% for MRI-1.9.3
+
