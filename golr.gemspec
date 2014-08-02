@@ -17,6 +17,6 @@ Gem::Specification.new do |gem|
   gem.version       = Golr::VERSION
   gem.add_development_dependency('rspec', '~> 3.0.0')
   gem.add_development_dependency('cucumber', '~> 1.3.16')
-  gem.add_development_dependency('simplecov', '~> 0.8.2')
-  gem.add_development_dependency('metric_fu', '~> 4.4.4') unless ENV['TRAVIS'] == 'true'
+  gem.add_development_dependency('simplecov', '~> 0.9.0')
+  gem.add_development_dependency('metric_fu', '~> 4.11.1') unless ENV['TRAVIS'] == 'true'
 end
