@@ -7,14 +7,14 @@ module Golr
         key = Key.key(rand(5) + 1, rand(5) + 1)
         game = Game.new(5,5)
 
-        game.alive?(key).should be_false
+        game.alive?(key).should be_falsey
       end
 
       it 'a new Game accepts and returns a living cell at any coordinates within its grid boundaries' do
         key = Key.key(rand(5) + 1, rand(5) + 1)
         game = Game.new(5,5, [key])
 
-        game.alive?(key).should be_true
+        game.alive?(key).should be_truthy
       end
     end
 
@@ -58,16 +58,16 @@ module Golr
         4.times.each { game.evolve }
         shifted_glider = game.grid
 
-        shifted_glider[Key.key(1,2)].should be_false
-        shifted_glider[Key.key(3,1)].should be_false
-        shifted_glider[Key.key(3,2)].should be_false
-        shifted_glider[Key.key(3,3)].should be_false
+        shifted_glider[Key.key(1,2)].should be_falsey
+        shifted_glider[Key.key(3,1)].should be_falsey
+        shifted_glider[Key.key(3,2)].should be_falsey
+        shifted_glider[Key.key(3,3)].should be_falsey
 
-        shifted_glider[Key.key(2,3)].should be_true
-        shifted_glider[Key.key(3,4)].should be_true
-        shifted_glider[Key.key(4,2)].should be_true
-        shifted_glider[Key.key(4,3)].should be_true
-        shifted_glider[Key.key(4,4)].should be_true
+        shifted_glider[Key.key(2,3)].should be_truthy
+        shifted_glider[Key.key(3,4)].should be_truthy
+        shifted_glider[Key.key(4,2)].should be_truthy
+        shifted_glider[Key.key(4,3)].should be_truthy
+        shifted_glider[Key.key(4,4)].should be_truthy
       end
     end
 

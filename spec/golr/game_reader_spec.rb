@@ -18,13 +18,13 @@ module Golr
         game.columns.should == 8
         game.rows.should == 7
 
-        game.alive?(Key.key(1,1)).should be_false
-        game.alive?(Key.key(3,2)).should be_true
-        game.alive?(Key.key(2,3)).should be_true
-        game.alive?(Key.key(4,4)).should be_true
-        game.alive?(Key.key(4,5)).should be_false
-        game.alive?(Key.key(8,6)).should be_true
-        game.alive?(Key.key(7,7)).should be_false
+        game.alive?(Key.key(1,1)).should be_falsey
+        game.alive?(Key.key(3,2)).should be_truthy
+        game.alive?(Key.key(2,3)).should be_truthy
+        game.alive?(Key.key(4,4)).should be_truthy
+        game.alive?(Key.key(4,5)).should be_falsey
+        game.alive?(Key.key(8,6)).should be_truthy
+        game.alive?(Key.key(7,7)).should be_falsey
       end
     end
   end
